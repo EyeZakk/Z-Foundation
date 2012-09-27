@@ -1,0 +1,350 @@
+@import 'common/common'
+
+//.calendar
+//  background: #F5F5F5
+
+// override grid header style...
+body.admin .admin-content-box .content .grid .calendar .calendar-balloon.balloon
+  .header
+    padding: 16px
+    font-size: 14px
+    height: 46px
+    border-radius: 5px 5px 0px 0px
+
+// .calendar-wrap
+//   position: relative
+//   @include centered
+//   @include rounded_corners(3px)
+//   @include box_shadow(0 0 6px rgba(0,0,0,0.3))
+//   padding: 20px 0px 20px 0px
+//   background: #fff    
+
+.calendar
+  text-shadow: none
+  position: relative
+  @include centered
+  // @include rounded_corners(3px)
+  // @include box_shadow(0 0 6px rgba(0,0,0,0.3))
+  padding: 20px
+  background: #fff
+  color: #333
+  $ff: 'Helvetica Neue', helvetica, arial, sans-serif
+  font-family: $ff  
+
+  width: 864px
+  position: relative
+  @include rounded_corners(none)
+  @include box_shadow(none)
+  padding: 0px 20px 0px 20px  
+
+  h2
+    font-family: 'Quicksand Light', 'Helvetica Neue', helvetica, arial, sans-serif
+  
+  h3, h4, div, a
+    font-family: $ff   
+
+  .field-label.price
+    margin: 7px 4px 0px 0px !important
+    width: 66px
+    .dollar-wrap
+      float: right
+
+  input[type='text'].price
+    width: 100px
+    display: inline-block
+
+  .save-button, #pricing-rule-delete
+    font-family: "Lobster"
+    padding: 4px 22px 7px 22px
+    font-size: 16px !important
+    float: right
+    height: 30px
+
+  .cancel-button
+    float: left
+    margin-top: 5px
+
+  #pricing-rule-delete
+    margin-right: 8px
+
+  td.fc-header-center
+    text-align: center
+
+  .fc-widget-header, .fc-widget-header .fc-last
+    width: 100px
+
+  .fc-header-left .fc-button-content
+    font-family: Lucida Sans, Arial, sans-serif    
+
+  table, tr, td, div
+    font-size: 14px
+    font-family: 'Helvetica Neue', helvetica
+
+  tbody tr td
+    padding-bottom: 4px
+
+  .fc-day-number, .fc-widget-header
+    font-weight: normal
+    font-size: 11px
+
+    // overrides
+    //float: right
+
+  .fc-grid .fc-day-number    
+    padding: 3px 4px    
+
+  .fc-widget-header
+    padding: 5px 0px 5px 0px
+  .fc-button.fc-button-prev, .fc-button.fc-button-next
+    .fc-button-inner
+      .fc-button-content
+        font-family: Lucida Sans,Arial,sans-serif
+
+  .fc-event.fc-event-skin
+    background: #A9ABFE
+    padding-left: 5px !important
+    background: transparent
+    border-color: transparent
+    background-color: transparent
+
+  .fc-event.fc-event-skin.viewstack-top
+    z-index: 9999  
+
+  .fc-event.fc-event-skin.eventColor-9cbb00
+    background: #9cbb00 !important
+
+  .fc-event.fc-event-skin.eventColor-CCCC99
+    background: #CCCC99 !important
+
+  .fc-event.fc-event-skin.eventColor-CCCCCC
+    background: #CCCCCC !important
+
+  .fc-event.fc-event-skin.eventColor-CCCCFF
+    background: #CCCCFF !important
+
+  .fc-event.fc-event-skin.eventColor-CCFF99
+    background: #CCFF99 !important
+
+  .fc-event.fc-event-skin.eventColor-CCFFCC
+    background: #CCFFCC !important
+
+  .fc-event.fc-event-skin.eventColor-CCFFFF
+    background: #CCFFFF !important
+
+  .fc-event.fc-event-skin.eventColor-FFCC99
+    background: #FFCC99 !important
+
+  .fc-event.fc-event-skin.eventColor-FFCCCC
+    background: #FFCCCC !important
+
+  .fc-event.fc-event-skin.eventColor-FFCCFF
+    background: #FFCCFF !important
+
+  .fc-event.fc-event-skin.eventColor-FFFFCC
+    background: #FFFFCC !important
+
+  .fc-event-inner
+    height: 23px
+    padding: 4px 6px 3px 11px
+    margin: 3px 0px 0px 0px
+    font-size: 11px
+    text-shadow: none
+    background: #EB5F3A
+    @include rounded_corners(10px)
+
+
+  .calendar-balloon.balloon
+    position: absolute
+    background: #fff
+    z-index: 1000
+    width: 262px
+    height: auto
+    border: 2px solid #b4b4b4
+    @include rounded_corners(5px)
+    @include basic_shadow_c(9px, rgba(0,0,0,0.3))
+
+    .header
+      padding: 16px
+      font-size: 14px
+      height: 46px
+      border-radius: 5px 5px 0px 0px
+
+    form
+      margin: 0px
+
+
+    div, option, select, a
+      font-family: 'Museo Slab', Helvetica
+      font-size: 12px
+
+  .inner
+    width: 100%
+    height: 100%
+    padding: 10px
+
+    select
+      width: auto
+      float: left
+      margin-right: 10px
+      clear: none
+
+    .dates
+      margin: 10px 0px 0px 0px
+
+      .date-box
+        width: 100px
+        float: left
+
+      .to-wrap
+        float: left
+        margin: 6px 6px 2px 5px
+
+    .times
+      .field-label
+        width: 71px
+        margin: 6px 0px 0px 0px
+
+      .time-input
+        width: 145px
+        height: 26px
+        margin: 1px 0px 0px 0px
+
+    .field-label.start-date
+      margin: 4px 0px 12px 0px
+
+    .breaker-dashed
+      clear: both
+      width: 100%
+      border-bottom: 1px dashed #CCC
+      height: 20px
+      margin-bottom: 16px
+
+    .cancel-btn, .delete-btn
+      float: right
+      font-size: 15px
+      margin-left: 2px
+      margin-right: 2px
+      padding-left: 4px
+      padding-right: 4px
+      cursor: pointer
+
+    .delete-btn
+      color: red
+      float: left
+
+    .delete-btn:hover
+      color: #fff
+      background: red
+
+    .cancel-btn:hover, .delete-btn:hover
+      text-decoration: none
+
+
+  div.fc-event-title
+    cursor: pointer
+    $sz: 11px
+    font-size: $sz
+    height: 100% //12px
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+    div.start, div.end, div.hyphen-wrap
+      font-size: $sz
+      display: inline
+
+    .dollar-wrap, .event-price
+      font-size: $sz
+      display: inline-block
+
+    .dollar-wrap
+      margin-right: 2px
+
+    div.start
+
+
+    div.end
+
+
+  .balloon-arrow, .balloon-arrow-border
+    width: 0
+    height: 0
+    border-top: 14px solid transparent
+    border-bottom: 14px solid transparent
+    border-right: 14px solid #b4b4b4
+    position: absolute
+    margin-left: -14px
+    margin-top: 54px
+    z-index: 10
+
+
+  .balloon-arrow-border
+    border-color: transparent #CCC transparent transparent
+    margin-left: -16px
+    z-index: 1
+
+
+  .balloon-arrow.right, .balloon-arrow-border.right
+    width: 0
+    height: 0
+    border-top: 14px solid transparent
+    border-bottom: 14px solid transparent
+    border-left: 14px solid #b4b4b4
+    border-right: none
+    right: -14px
+
+    .balloon-arrow-border.right
+      border-color: transparent transparent transparent #CCC
+      right: -20px
+
+    .balloon .inner
+      padding-top: 6px
+
+  .calendar-balloon.balloon.venue.new
+    height: auto
+
+  .calendar-balloon.balloon.venue.new.no-events
+    height: 195px
+
+  .date-wrap
+    margin-top: 8px
+
+  select.event-select
+    width: 100%
+
+
+.balloon-header, .balloon-header.gradient-header
+  font-size: 17px
+  height: auto
+  padding: 8px
+  text-align: left
+  @include rounded_corners_ext(4px, 4px, 0px, 0px)
+
+.calendar-progress-wrap
+  position: absolute
+  background-color: #666
+  opacity: 0.87
+  display: none
+  z-index: 9999
+  @include rounded_corners(4px)
+
+  .loading-title
+    font-size: 30px
+    color: #f7f7f7
+    text-shadow: none
+    width: 300px
+    text-align: center
+    margin: 264px auto 0px auto
+    font-family: "Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+.calendar-progress
+  @include centered
+  width: 300px
+  
+  .bar
+  
+
+
+#dashboard-content .new-pricing-rule-form
+  .alert.alert-error.save-errors
+    margin-top: 0px    

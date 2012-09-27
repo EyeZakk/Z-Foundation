@@ -1,0 +1,139 @@
+table.basic-table
+  table-layout: fixed
+  clear: both
+  width: 100%
+  border: 1px solid #CCC
+  color: #666
+  font-size: 13px
+
+  tr, tr.even
+    width: 100%
+    float: none
+    background: #fff
+
+  tr.no-data td
+    width: 100%
+    border-left: none
+    white-space: nowrap
+
+  tr.canceled
+    background: #F2DEDE
+    color: #B94A48
+    text-shadow: none
+
+    a
+      color: #b94648
+
+
+  tr th, tr td
+    text-align: left
+    padding: 9px 10px
+
+    border-top: 1px solid #E6E6E6
+    border-left: 1px dotted #CFCFCF
+    overflow: visible
+    white-space: nowrap
+
+    a:hover
+      text-decoration: none
+
+  th.sortable, th.sortable:hover
+    cursor: pointer
+
+  i.up-icon, i.down-icon
+    opacity: 0.8
+
+  i.up-icon:hover, i.down-icon:hover  
+    opacity: 1.0
+
+  thead 
+    tr
+      color: #666
+      -webkit-background-size: 100% 100%
+      -moz-background-size: 100% 100%
+      -o-background-size: 100% 100%
+      background-size: 100% 100%
+      background: -webkit-gradient(linear, left top, left bottom, from(#EFEFF4), to(#D6DADF))
+      background: -webkit-linear-gradient(top, #EFEFF4, #D6DADF)
+      background: -moz-linear-gradient(top, #EFEFF4, #D6DADF)
+      background: -ms-linear-gradient(top, #EFEFF4, #D6DADF)
+      background: -o-linear-gradient(top, #EFEFF4, #D6DADF)
+      background: linear-gradient(top, #EFEFF4, #D6DADF)
+      border-color: #CCC
+
+  tr.last
+    td.no-show
+      border: 0px
+      background-color: transparent      
+
+
+.basic-table.order-table
+  clear: both
+  margin-top: 14px
+  border: none
+
+  tr td
+    line-height: 150%    
+
+  tr:first-child
+    border-top: 1px solid #ccc
+
+  tr.solid-top-border, tr td.solid-top-border  
+    border-top: 1px solid #CCC      
+
+  tr.solid-bottom-border, tr td.solid-bottom-border
+    border-bottom: 1px solid #CCC          
+
+  tr.solid-right-border, tr td.solid-right-border
+    border-right: 1px solid #CCC    
+
+  tr.solid-left-border, tr td.solid-left-border
+    border-left: 1px solid #CCC    
+
+  tr
+    td:first-child, th:first-child
+      border-left: 1px solid #ccc
+    
+    td:last-child, th:last-child
+      border-right: 1px solid #ccc
+
+    td.total
+      border-right: 1px solid #ccc
+      border-bottom: 1px solid #ccc
+      border-left: 1px solid #ccc
+
+
+  tr.last, tr.second-last
+    background: transparent
+    background-color: transparent
+
+    td.no-show.sales-tax
+      padding: 9px 4px
+
+    td.white-bg
+      background: #fff
+      background-color: #fff
+
+    td.red-bg
+      background: #EA8676
+      text-shadow: none
+      border: 3px solid #D24858
+      color: #000
+
+    td, td.no-show.solid-top-border
+      border-top: 1px solid #ccc
+      white-space: nowrap
+      overflow: visible
+
+  tr.second-last
+    td.transparent-border
+      border: 0px      
+  
+  tr.second-last.solid-top-border
+    border-top: 1px solid #CCC
+
+  tr th, tr td
+    white-space: normal
+
+  tr.last td.total
+    background-color: #fff

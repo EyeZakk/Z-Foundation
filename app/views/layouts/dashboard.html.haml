@@ -1,0 +1,27 @@
+-@_current_layout='dashboard'
+-content_for :head do
+  =yield :dashboard_head
+
+-content_for :content do
+  .admin-content-box
+    .sidebar
+      %ul.nav.nav-list
+        %li.active
+          %a
+            %i.icon-calendar
+              Menu Item #1
+        %li
+          %a
+            %i.icon-cog
+              Menu Item #2              
+            
+    .content
+      .dashboard_grid_container
+        -if @_page_heading.present?
+          .page-heading-wrap
+            =@_page_heading
+        =yield :dashboard_content
+        .breaker
+    .breaker
+  
+=render :template => 'layouts/application'  

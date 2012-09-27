@@ -1,0 +1,23 @@
+- content_for :content do
+  .dashboard_grid_container
+    .widget-box.user-box
+      .widget-box-heading
+        - if params[:changing] == "true"
+          Change your password
+        - else
+          Forgot your password?
+
+      .widget-box-inner
+
+        = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+          
+          - devise_error_messages!
+          
+          .input-label.grid_2
+            Email        
+          = f.text_field :email, :class => 'grid_2'
+          .breaker
+          = hidden_field_tag "changing", params[:changing]
+          = f.submit "Send Me Reset Instructions",
+          :class => 'btn heavy-rect action grid_1', :id => 'send-instructions-button'
+          .breaker

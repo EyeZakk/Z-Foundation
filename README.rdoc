@@ -1,0 +1,3 @@
+== Z Foundation
+
+This is a base Rails app that includes certain gems, assets and layouts that I find myself wanting to reuse often.  There are certain things I should probably restructure (vendoring/libbing/gemifying certain assets, making this whole thing a Rails app template) but it's a nice foundation as is.

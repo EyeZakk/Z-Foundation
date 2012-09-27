@@ -1,0 +1,19 @@
+- content_for :content do
+  .dashboard_grid_container
+    .widget-box.user-box.reset-password
+      .widget-box-heading
+        Change your password
+      .widget-box-inner
+        = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|      
+
+          - devise_error_messages!  
+
+          .input-label.grid_2
+            New Password
+          =f.password_field :password
+          .breaker
+          .input-label.grid_2
+            Confirm New Password
+          = f.password_field :password_confirmation
+          .breaker
+          =f.submit "Change My Password", :class => 'grid_2 btn action', :id => 'change-password-submit"

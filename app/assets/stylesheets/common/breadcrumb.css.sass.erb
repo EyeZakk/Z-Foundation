@@ -1,0 +1,53 @@
+.breadcrumb-wrap
+  width: 100%
+  text-align: left
+  padding: 0px
+  position: relative
+  z-index: 9999
+  border-bottom: 1px solid #b4b4b4
+
+  ul.breadcrumb
+    min-width: 300px
+    background-image: url('<%= asset_path 'common/breadcrumb/breadcrumb_bg.png' %>')
+    background-repeat: repeat-x
+    height: 30px
+    line-height: 30px
+    width: 100%
+    overflow: hidden
+    margin: 0px
+    border-radius: 3px
+    -moz-border-radius: 3px
+    -webkit-border-radius: 3px
+    padding: 0px
+
+    .breadcrumb-item
+      float: left
+      padding-left: 10px
+      list-style-type: none
+      font-size: 13px
+
+      .inner
+        padding: 0px !important
+
+        a
+          background-image: url('<%= asset_path 'common/breadcrumb/breadcrumb_separator.png' %>')
+          height: 30px
+          display: block
+          background-repeat: no-repeat
+          background-position: right
+          padding-right: 15px
+          text-decoration: none
+          color: #333
+          text-shadow: none
+          line-height: 30px
+
+        a.last
+          background-image: none
+
+        a:hover
+          color: #1A88E9
+
+        span.last
+          color: #767676
+          line-height: 30px
+          text-shadow: none

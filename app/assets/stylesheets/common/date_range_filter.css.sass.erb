@@ -1,0 +1,55 @@
+@import 'common/common'
+
+.date-range-filter
+  .dropdown-menu
+    width: 248px
+    height: 120px
+    padding: 16px
+
+    .date-filter-header
+      margin-bottom: 6px
+
+    .to-wrap
+      float: left
+      text-align: center
+      width: 32px
+      font-size: 13px
+      margin-top: 7px
+
+    input.min-date, input.max-date
+      float: left
+      height: 26px
+      width: 90px
+      margin-bottom: 0px
+
+    .apply-filter-button
+      margin-top: 2px
+      width: 90px
+      font-size: 12px
+
+.filter-info
+  background-color: #DFF0D8
+  border: 1px solid #ccc
+  text-shadow: none
+  padding: 12px
+  font-size: 13px
+  @include rounded_corners(6px) 
+
+  .remove-filter-button
+    display: block
+    cursor: pointer
+    width: 14px
+    height: 14px
+    float: right
+    margin-top: -8px
+    margin-right: -8px
+    font-size: 13px
+
+  .remove-filter-button:hover
+    color: #888
+
+  .min-date, .max-date
+    font-weight: bold
+
+  a:hover
+    cursor: pointer

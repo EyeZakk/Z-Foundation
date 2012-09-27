@@ -1,0 +1,32 @@
+!!! html5
+%html
+  %head
+    %title 
+      Z App Foundation
+    %link{:rel => "icon", :type => "image/png", :href => asset_path("favicon.png")}      
+    =stylesheet_link_tag "application"
+    =javascript_include_tag "application"
+    =csrf_meta_tags
+    =yield :head    
+  -if @_current_layout
+    -layout_str = " layout-#{@_current_layout}"
+  -else
+    -layout_str = ""
+  %body{:class => "#{params[:controller].gsub('/', ' ')} #{params[:action]}#{layout_str}"}
+    #header
+      .inner
+        =link_to nil, :href => root_path, :id => 'logo' do
+          Z App Foundation
+        -if user_signed_in?
+          =link_to "Sign Out", destroy_user_session_path, :method => :delete,
+            :class => 'auth-button btn heavy-rect action'
+          -if params[:controller] == 'home'
+            =link_to "View Dashboard", admin_availabilities_path, :class => 'auth-button btn action'             
+        -else
+          =link_to "Sign In", new_user_session_path, :class => 'auth-button btn heavy-rect action'
+    #wrapper
+      #content
+        =render_alerts
+        =yield :content
+    #footer
+      Footer Content

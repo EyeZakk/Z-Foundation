@@ -1,0 +1,8 @@
+.alert.alert-error.validation-errors
+  .err-heading
+    We encountered the following issues updating your information.&nbsp;&nbsp;
+    Please correct them and save again:
+  %ul.err-list
+    -record.errors.full_messages.each do |msg|
+      %li
+        =msg

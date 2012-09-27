@@ -1,0 +1,118 @@
+@import 'common/common'
+
+.editor-frame
+  .btn.btn-primary, .fullscreen-btn
+    float: right
+    margin-top: 12px
+    margin-left: 10px
+    margin-right: 10px
+    margin-bottom: 10px
+
+  input.btn.btn-primary
+    height: 31px
+    padding-top: 2px
+
+  a.fullscreen-btn, a.fullscreen-btn img
+    width: 28px
+    height: 28px
+    margin-top: 8px
+    cursor: pointer
+
+  a.fullscreen-btn:hover, a.settings-btn:hover
+    img
+      opacity: 0.7
+
+
+  a.settings-btn, .settings-btn img
+    width: 25px
+    height: 25px
+    cursor: pointer
+
+  .btn-group.settings-menu
+    width: 25px
+    height: 25px
+    float: right
+    margin-top: 17px
+    margin-right: 24px
+    margin-left: 24px
+
+    ul.dropdown-menu
+      min-width: 100px
+      left: -39px
+      padding: 0px
+
+  .save-status
+    float: right
+    margin-top: 22px
+    margin-right: 12px
+    font-family: "Vollkorn", cursive
+    font-size: 14px
+    width: 238px
+    text-align: left
+    color: #333
+    
+  .save-button
+    padding-bottom: 8px
+    padding-top: 6px  
+
+.btn.user-home-btn
+  float: left
+  margin-top: 55px
+  font-size: 15px
+  padding: 5px 13px 6px 13px
+
+.editor-frame
+  width: 100%
+  height: 520px
+  -moz-box-shadow: 0 0 5px #888
+  -webkit-box-shadow: 0 0 5px #888
+  box-shadow: 0 0 5px #888
+  position: relative
+  margin-top: 10px
+  @include centered
+
+  .editor-wrap
+    height: 460px
+    width: 100%
+    overflow: hidden
+
+    .CodeMirror, .CodeMirror .CodeMirror-scroll
+      height: 100%
+
+    .full.CodeMirror
+      position: fixed
+      width: 100%
+      height: 100%
+      top: 0px
+      left: 0px
+      margin-top: 0px
+
+  .title-wrap.edit
+    font-family: 'Playfair Display'
+    font-size: 17px
+    margin-top: 19px
+    margin-left: 10px
+    text-align: left
+    width: auto
+    float: left
+    z-index: 100
+
+    .url:hover
+      text-decoration: none
+
+.editor-frame.fullscreen
+  position: fixed
+  top: -10px
+  right: 0px
+  width: 100%
+  height: 100%
+  z-index: 99999
+  padding: 0px
+
+  .page-edit-form
+    margin-top: 0px
+    height: 100%
+
+  .editor-wrap
+    height: 100%
+    padding-bottom: 58px

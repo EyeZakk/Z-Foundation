@@ -1,0 +1,26 @@
+- content_for :content do
+  .dashboard_grid_container
+    .widget-box.user-box.register
+      .widget-box-heading
+        Register
+      .widget-box-inner
+        = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+          - devise_error_messages!
+          .input-label.grid_2
+            Email
+          = f.text_field :email, :class => 'grid_2'
+          .breaker
+          .input-label.grid_2
+            Password
+          = f.password_field :password, :class => 'grid_2'
+          .breaker
+          .input-label.grid_2
+            Password
+          = f.password_field :password_confirmation, :class => 'grid_2'          
+          .breaker
+          = f.submit "Register", :class => 'btn heavy-rect action grid_1', :id => 'register-button'
+          .breaker
+          .have-account-wrap
+            Already have an account?
+            = link_to "Sign In", new_session_path(resource_name), :class => 'sign-in'
+        .clear

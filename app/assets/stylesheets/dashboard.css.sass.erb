@@ -1,0 +1,123 @@
+@import 'common/common'
+
+body.layout-dashboard
+  
+  $container_width: 1100px
+
+  #header
+    .inner
+      width: $container_width
+
+  #wrapper    
+    #content
+      width: $container_width
+
+  $ht: 290px
+  .admin-content-box
+    width: $container_width
+    // background-color: #2C2C2C
+    // background-image: -webkit-linear-gradient(top, #333, #222)
+    min-height: $ht
+    height: auto
+    @include centered
+    @include rounded_corners(6px)
+    @include basic_shadow_c(20px, #888)
+    overflow: visible
+    background: #F7F7F7 url("<%= asset_path 'common/tan_bg.png' %>")
+
+    .sidebar
+      width: 220px
+      float: left
+      text-align: left
+      overflow: hidden
+      background-image: transparent
+
+      .nav-tabs > .active > a, .nav > li > a:hover 
+        border: none
+        padding-bottom: 8px
+
+      .nav-list
+        padding: 18px 0px 0px 0px
+        width: 100%
+
+        $g_from: #EFEFF4
+        $g_to: #D6DADF
+        $h_g_from: #EB5F3A
+        // $h_g_to: #A44228
+        $h_g_to: #D35534
+
+        li
+          margin: 0px
+          
+          a, a:hover
+            width: 202px
+            text-shadow: none
+            color: #000
+            font-size: 15px
+            padding: 10px 24px 10px 20px
+            white-space: nowrap
+            margin-left: 16px
+            margin-bottom: 10px
+            margin-right: 0px
+            background-color: $g_to  
+            background: -webkit-gradient(linear, left top, left bottom, from($g_from), to($g_to))
+            background: -webkit-linear-gradient(top, $g_from, $g_to)
+            background: -moz-linear-gradient(top, $g_from, $g_to)
+            background: -ms-linear-gradient(top, $g_from, $g_to)
+            background: -o-linear-gradient(top, $g_from, $g_to)
+            background: linear-gradient(top, $g_from, $g_to)               
+            @include rounded_corners(5px)
+            @include basic_shadow_c(5px, #888)
+
+            i
+              margin-top: 1px
+              margin-right: 3px
+
+          a:hover
+            color: #fff
+            //background: $h_g_from
+            @include gradient_ext($h_g_from, $h_g_to)
+            // background-color: $g_to  
+            // background: -webkit-gradient(linear, left top, left bottom, from($g_from), to($g_to))
+            // background: -webkit-linear-gradient(top, $g_from, $g_to)
+            // background: -moz-linear-gradient(top, $g_from, $g_to)
+            // background: -ms-linear-gradient(top, $g_from, $g_to)
+            // background: -o-linear-gradient(top, $g_from, $g_to)
+            // background: linear-gradient(top, $g_from, $g_to)            
+
+        li.active
+          a, a:hover
+            color: #fff
+            @include gradient_ext($h_g_from, $h_g_to)
+            // color: #000            
+
+    .content
+      width: 880px
+      padding: 20px 10px
+      background: #F7F7F7 url("<%= asset_path 'common/tan_bg.png' %>")
+      float: left
+      min-height: $ht
+      @include rounded_corners_ext(0px, 6px, 6px, 0px)
+
+      .heading
+        width: 100%
+        text-align: left
+        font-weight: bold
+        font-size: 18px
+        padding-left: 22px
+        margin-bottom: 12px
+
+      .nav-tabs > .active > a, .nav-tabs > .active > a:hover
+        background: #F0F2EB
+
+  .dashboard_grid_container
+    position: relative
+    @include centered
+    @include rounded_corners(3px)
+    @include box_shadow(0 0 6px rgba(0,0,0,0.3))
+    padding: 20px 0px 20px 0px
+    background: #fff    
+
+    .btn.heavy-rect.in-form[class^="grid_"],
+    .btn.heavy-rect.in-form[class*=" grid_"]
+      padding: 5px 10px 3px 10px

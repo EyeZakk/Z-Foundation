@@ -1,0 +1,106 @@
+@import 'common/common'
+
+.close-button.fancy
+  width: 14px
+  height: 14px
+  margin-top: -10px
+  position: absolute
+  color: #888
+  z-index: 9999
+  right: 10px
+  top: 19px
+  font-size: 15px
+
+.close-button.fancy:hover
+  text-decoration: none
+  cursor: pointer
+
+
+.alert-close
+  cursor: pointer
+  float: right
+  margin-top: -6px
+  color: #777
+
+.widget-box
+  $lr_pad: 10px
+  $h_grad_min: #FAFAFA
+  $h_grad_max: #EAEAEA
+  $inner_bg: #fff
+  $border_rad: 5px  
+  $border_c: #ccc
+
+  width: 100%
+  line-height: 100%
+  border: 1px solid $border_c
+  @include rounded_corners($border_rad)
+
+  .widget-box-heading
+    width: 100%
+    text-align: left
+    font-weight: bold
+    font-size: 18px
+    padding: $lr_pad
+    border-bottom: 1px solid $border_c
+    @include gradient2($h_grad_min, $h_grad_max)
+    @include rounded_corners_ext($border_rad, $border_rad, 0px, 0px)
+
+    .btn
+      margin-top: -2px
+
+  .btn
+    float: right
+
+  ul.widget-box-inner-list
+    margin: 0px
+    padding: 0px
+
+    li
+      padding: 12px $lr_pad
+      font-size: 15px
+      border-bottom: 1px solid $border_c
+
+      a.btn
+        [class^="icon-"],
+        [class*=" icon-"]        
+          margin-left: 3px
+
+      .place-name
+        display: block
+        float: left
+
+      .place-address
+        font-size: 12px
+        font-style: italic
+
+    li:last-child
+      border-bottom: none
+
+
+  .widget-box-inner
+    margin: 0px
+    padding: 14px
+    background: $inner_bg
+
+.time-select-wrap
+  select
+    width: 70px
+    margin: 0px
+    height: 26px
+    font-size: 13px
+
+  select:last-child
+    width: 48px    
+
+.popover
+  .alert, .alert.alert-error.validation-errors
+    font-size: 12px
+    margin-top: 0px
+
+.card
+  background: #f7f7f7
+  width: 100%    
+  @include basic_shadow(12px)
+  @include rounded_corners(6px)
+  width: 100%
+  min-height: 30px
